@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
+import { NotExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import * as Notiflix from 'notiflix';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,6 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   sendEmail(){
+    Notiflix.Loading.standard('Enviando Correo...')
     let params = {
       email:this.datos.value.email,
       asunto:this.datos.value.asunto,
@@ -28,6 +31,13 @@ export class HomeComponent implements OnInit {
 
 this.httpClient.post('http://localhost:3000/sendEmail',params).subscribe(res=>{
   console.log(res)
+  Notiflix.Loading.remove();
+  if(res){
+      Notiflix.Notify.success('Correo enviado exitosamente');
+  }else{
+      Notiflix.Notify.warning('- Correo no enviado - Error de servidor ');
+  }
+
 })
 // this.httpClient.post('https://the-academy-backend.herokuapp.com/sendEmail',params).subscribe(res=>{
 //   console.log(res)
