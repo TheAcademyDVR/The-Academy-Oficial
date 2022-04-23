@@ -1,0 +1,92 @@
+<div class="p-5 mb-1 bg-primary text-white fixed-top barra-blue"></div>
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light rounded-bottom-navbar">
+    <!--navbar fixed-top navbar-light bg-light-->
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/the-academy-logo.svg" alt="" width="200" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse navbar-right" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active menu-text menu-inicio" aria-current="page" href="{{'home'}}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  menu-text menu-nosotros" href="#">Nosotros</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle menu-text" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Aplicaciones
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+
+                        <li><a class="dropdown-item" href="#">App Móviles</a></li>
+                        <li><a class="dropdown-item" href="#">Páginas Web</a></li>
+                        <li><a class="dropdown-item" href="#">Tienda Virtual</a></li>
+                        <li><a class="dropdown-item" href="#">Delivery</a></li>
+                        <li><a class="dropdown-item" href="#">Sistemas de Gestión</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle menu-text menu-color" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Asesoria Académica
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li>
+                            <div class=" dropend">
+                                <button type="button" class=" dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              Tesis de Grado
+                            </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Informática y Desarrollo de Sistemas</a></li>
+                                    <li><a class="dropdown-item" href="#">Contabilidad y Auditoría</a></li>
+                                    <li><a class="dropdown-item" href="#">Administración de Empresas</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class=" dropend">
+                                <button type="button" class=" dropdown-item dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              Proyectos de
+                            </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Investigativos</a></li>
+                                    <li><a class="dropdown-item" href="#">Vinculación</a></li>
+                                    <li><a class="dropdown-item" href="#">Monográfias</a></li>
+                                    <li><a class="dropdown-item" href="#">Portafolios</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Ensayos</a></li>
+                        <li><a class="dropdown-item" href="#">Informes</a></li>
+                        <li><a class="dropdown-item" href="#">Consultas</a></li>
+                        <li><a class="dropdown-item" href="#">Presentaciones</a></li>
+                        <li><a class="dropdown-item" href="#">Normas APA</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle menu-text" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Cursos Gratis
+                </a>
+                    <ul class="dropdown-menu dropdown-menu-light
+                      " aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Tecnologias de Información</a></li>
+                        <li><a class="dropdown-item" href="#">Contabilidad y Auditoría</a></li>
+                        <li><a class="dropdown-item" href="#">Administración de Empresas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-text menu-contactos">Contactos</a>
+                </li>
+            </ul>
+
+            <form class="d-flex">
+                <button class="btn btn-outline-primary menu-text-btn rounded-pill" type="submit" routerLinkActive="active" [routerLink]="['login']">INICIAR SESIÓN</button>
+            </form>
+        </div>
+    </div>
+</nav>

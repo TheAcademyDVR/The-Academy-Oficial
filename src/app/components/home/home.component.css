@@ -1,0 +1,167 @@
+.card-border-radius {
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    grid-gap: 40px;
+}
+
+.card-border-radius:hover {
+    box-shadow: 0px 0px 20px rgba(20, 90, 255, 0.3);
+}
+
+.title-card {
+    position: relative;
+    top: 35px;
+    text-align: center;
+}
+
+.img-card {
+    position: relative;
+    min-width: 80%;
+    height: 100%;
+    width: 90%;
+    top: 10px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    margin: 0px auto;
+}
+
+.img-card2 {
+    position: relative;
+    min-width: 80%;
+    height: 100%;
+    width: 87%;
+    top: 10px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    margin: 0px auto;
+}
+
+.text-card {
+    position: relative;
+    text-align: left;
+    top: -35px;
+}
+
+.card-text-btn {
+    position: relative;
+    font-size: 20px;
+    border-radius: 30px;
+    top: -20px;
+}
+
+@media(max-width:976px) {
+    .slide-home {
+        top: 75px;
+    }
+    .card-hidde {
+        visibility: hidden;
+    }
+}
+
+.tareas-static {
+    background: rgb(4, 70, 163);
+    margin-top: 50px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tareas-static:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.title-position {
+    margin-top: 80px;
+}
+
+.title-position-top {
+    background: rgb(1, 62, 149);
+    border-start-end-radius: 45px;
+    border-start-start-radius: 45px;
+}
+
+.card-two {
+    margin-top: 30px;
+}
+
+.card-two-home {
+    margin-top: 120px;
+}
+
+.card-title-two {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.card-title-list {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.card-title-bottom {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.card-text-ir {
+    background: rgb(1, 62, 149);
+    color: white;
+    position: relative;
+    font-size: 20px;
+    border-radius: 30px;
+    top: -20px;
+}
+
+.contactos-border {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contacto-detalle {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media(max-width: 991) {
+    .contactos-border {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.btn-radius {
+    border-radius: 40px;
+}
+
+.btn-radius-message {
+    border-radius: 20px;
+}
+
+.card-contactos {
+    margin: 50px;
+}
+
+.btn-span-static {
+    color: var(--white);
+    background: rgb(4, 70, 163);
+    margin-top: 50px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-span-static:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
