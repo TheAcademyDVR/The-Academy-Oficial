@@ -11,10 +11,10 @@
         <div class="collapse navbar-collapse navbar-right" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                    <a class="nav-link active menu-text menu-inicio" aria-current="page" href="{{'home'}}">Inicio</a>
+                    <a class="nav-link active menu-text menu-inicio" aria-current="page" routerLink="{{'nosotros'}}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  menu-text menu-nosotros" href="#">Nosotros</a>
+                    <a class="nav-link  menu-text menu-nosotros" [routerLink]="['nosotros']">Nosotros</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -68,7 +68,11 @@
                         <li><a class="dropdown-item" href="#">Normas APA</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
+
+                <li class="nav-item">
+                    <a class="nav-link menu-text menu-contactos">Cursos</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle menu-text" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Cursos Gratis
                 </a>
@@ -78,9 +82,9 @@
                         <li><a class="dropdown-item" href="#">Contabilidad y Auditoría</a></li>
                         <li><a class="dropdown-item" href="#">Administración de Empresas</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link menu-text menu-contactos">Contactos</a>
+                    <a class="nav-link menu-text menu-contactos" routerLinkActive="Active" [routerLink]="['contactos']">Contactos</a>
                 </li>
             </ul>
 

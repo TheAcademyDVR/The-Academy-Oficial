@@ -1,5 +1,4 @@
 import { HttpClient } from '@angular/common/http';
-import { NotExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import * as Notiflix from 'notiflix';
@@ -20,7 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
   sendEmail(){
-    Notiflix.Loading.standard('Enviando Correo...')
+    //  Notiflix.Loading.circle('Enviando Correo...')
     let params = {
       email:this.datos.value.email,
       asunto:this.datos.value.asunto,
@@ -29,7 +28,7 @@ export class HomeComponent implements OnInit {
     }
     console.log(params);
 
-this.httpClient.post('http://localhost:3000/sendEmail',params).subscribe(res=>{
+this.httpClient.post('https://54.233.157.96:3000/sendEmail',params).subscribe(res=>{
   console.log(res)
   Notiflix.Loading.remove();
   if(res){
