@@ -13,10 +13,8 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
   { path: 'contactos', component: ContactosComponent },
   { path: 'nosotros', component: NosotrosComponent },
-  { path: 'cursos', component: CursosComponent },
   { path: 'asesoria-academica', component: AsesoriaAcademicaComponent },
   { path: 'desarrollo-de-sistemas', component: DesarrolloDeAplicacionesComponent },
   { path: '**', component: PagenotfoundComponent}
