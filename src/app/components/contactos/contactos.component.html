@@ -43,34 +43,37 @@
                             <h1 class="card-title ">Enviame un <span class="btn-span-static">&nbsp;&nbsp;Mensaje&nbsp;&nbsp;</span></h1>
                             <p class="card-text " style="font-size: 20px; ">Este es tu momento de iniciar tu preparación al 100% junto a The Academy.<br></p>
                         </div>
-                        <form class="row  needs-validation" novalidate>
-                            <div class="mb-3 ">
-                                <input type="text" name="" class="form-control btn-radius" id="validationCustom01" placeholder="Nombre Completos..">
-                            </div>
-                            <div class="mb-3 ">
-                                <input type="text" class="form-control btn-radius" id="validationCustom01" placeholder="Escribe tu numero de WhatsApp...">
-                            </div>
-                            <div class="mb-3 ">
-                                <input type="email " class="form-control btn-radius" id="exampleFormControlInput1 " formControlName="email" placeholder="Escribe tu correo electrónico">
-                            </div>
-                            <div class="mb-3 ">
-                                <input type="text" class="form-control btn-radius" id="validationCustom01" placeholder="Asunto" formControlName="asunto" required>
-                            </div>
-                            <div class="mb-3 ">
-                                <select class="form-select btn-radius" aria-label="Selecciona tu servicios que necesitas">
+                        <form [formGroup]="datos">
 
-                              <option value="1 ">Desarrollo de Sistemas</option>
-                              <option value="2 ">Desarrollo de Tesis</option>
-                              <option value="3 ">Asesoría Académicas</option>
-                              <option value="3 ">Capacitaciones</option>
-                              <option value="3 ">Más información</option>
+                            <div class="mb-3 ">
+                                <input type="text" name="" class="form-control btn-radius" id="validationCustom01" formControlName="nombre" placeholder="Nombre Completos..">
+                            </div>
+                            <div class="mb-3 ">
+                                <input type="number" class="form-control btn-radius" id="validationCustom01" formControlName="telefono" placeholder="Escribe tu numero de WhatsApp...">
+
+                            </div>
+                            <div class="mb-3 ">
+                                <input type="email" class="form-control btn-radius" id="exampleFormControlInput1 " formControlName="email" placeholder="Escribe tu correo electrónico">
+                            </div>
+                            <!-- <div class="mb-3 ">
+                              <input type="text" class="form-control btn-radius" id="validationCustom01" placeholder="Asunto" formControlName="asunto" required>
+                          </div> -->
+                            <div class="mb-3 ">
+                                <label> &nbsp;&nbsp; Elija una opción</label>
+                                <select class="form-select btn-radius" formControlName="tipo" placeholder="Selecciona tu servicios que necesitas" aria-label="Selecciona tu servicios que necesitas">
+                                <!-- <option selected>Selecciona el tipo de servicio</option> -->
+                              <option value="Desarrollo de Sistemas">Desarrollo de Sistemas</option>
+                              <option value="Desarrollo de Tesis">Desarrollo de Tesis</option>
+                              <option value="Asesoría Académicas">Asesoría Académicas</option>
+                              <option value="Capacitaciones">Capacitaciones</option>
+                              <option value="Más información">Más información</option>
                             </select>
                             </div>
                             <div class="mb-3 ">
-                                <textarea class="form-control  btn-radius-message" id="exampleFormControlTextarea1 " formControlName="mensaje" rows="5 " placeholder="Dejanos una descripción del servicio que necesitas..." required></textarea>
+                                <textarea class="form-control  btn-radius-message" id="exampleFormControlTextarea1 " required formControlName="mensaje" rows="5 " placeholder="Dejanos una descripción del servicio que necesitas..." required></textarea>
                             </div>
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary btn-radius" style="font-size: 18px">Enviar Mensaje</button>
+                                <button class="btn btn-primary btn-radius" type="submit" style="font-size: 18px" (click)="sendEmail()">Enviar mensaje</button>
                             </div>
 
                         </form>
@@ -95,19 +98,26 @@
         <div class="row ">
             <div class="col-sm-8 ">
                 <div class="card-two ">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255347.01839854964!2d-78.5706252593548!3d-0.1865937922802956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a4002427c9f%3A0x44b991e158ef5572!2sQuito!5e0!3m2!1ses!2sec!4v1651071367675!5m2!1ses!2sec"
-                        class="border-mapa" width="800" height="125" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.12006732097!2d-79.24035897413769!3d-0.9411948890145914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4b714a6c6769d%3A0x7feeda2ee3930415!2zTGEgTWFuw6E!5e0!3m2!1ses!2sec!4v1651071901080!5m2!1ses!2sec"
-                        class="border-mapa" width="800" height="125" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19113.783132935594!2d-79.36599217507256!3d-0.9498580210062052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4b496874afbe7%3A0xc8846226865c38d9!2sValencia!5e0!3m2!1ses!2sec!4v1651071802896!5m2!1ses!2sec"
-                        class="border-mapa" width="800" height="125" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="ratio " style="--bs-aspect-ratio: 15%;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255347.01839854964!2d-78.5706252593548!3d-0.1865937922802956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a4002427c9f%3A0x44b991e158ef5572!2sQuito!5e0!3m2!1ses!2sec!4v1651071367675!5m2!1ses!2sec"
+                            class="border-mapa" width="800" height="125" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <br>
+                    <div class="ratio " style="--bs-aspect-ratio: 15%;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.5147083658667!2d-79.22627772130532!3d-0.9411201003927772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4b7135f09b9c3%3A0x3644c6d6d7ed94ee!2sParque%20central%20de%20La%20Mana!5e0!3m2!1ses!2sec!4v1651079096452!5m2!1ses!2sec"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
+                    <br>
+                    <div class="ratio " style="--bs-aspect-ratio: 15%;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19113.783132935594!2d-79.36599217507256!3d-0.9498580210062052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d4b496874afbe7%3A0xc8846226865c38d9!2sValencia!5e0!3m2!1ses!2sec!4v1651071802896!5m2!1ses!2sec"
+                            class="border-mapa" width="800" height="125" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
 
                 </div>
             </div>
 
             <div class="col-sm-4 ">
                 <div class=" ">
-                    <div class="card-two  ">
+                    <div class="card-two  "> <br>
                         <h2 class="fs--25 font-weight-light">
                             The Academy - DVR
                         </h2>
