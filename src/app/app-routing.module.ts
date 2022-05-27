@@ -15,8 +15,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'contactos', component: ContactosComponent },
   { path: 'nosotros', component: NosotrosComponent },
-  { path: 'asesoria-academica', component: AsesoriaAcademicaComponent },
-  { path: 'desarrollo-de-sistemas', component: DesarrolloDeAplicacionesComponent },
+  { path: 'asesoria', component: AsesoriaAcademicaComponent },
+  { path: 'desarrollo', component: DesarrolloDeAplicacionesComponent },
+  { path: 'desarrollo/:delivery', component: DesarrolloDeAplicacionesComponent },
   { path: '**', component: PagenotfoundComponent}
 ];
 

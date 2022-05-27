@@ -14,10 +14,11 @@
                     <a class="nav-link active menu-text menu-inicio" aria-current="page" routerLinkActive="Active" [routerLink]="['home']">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" class="nav-link avbar-toggler  menu-text menu-nosotros collapse navbar-collapse navbar-right" [routerLink]="['nosotros']">Nosotros</a>
+                    <a data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" class="nav-link
+                       menu-text menu-nosotros collapse navbar-collapse navbar-right" [routerLink]="['nosotros']">Nosotros</a>
                 </li>
 
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle menu-text " href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Aplicaciones
                     </a>
@@ -29,9 +30,14 @@
                         <li><a class="dropdown-item" href="#">Delivery</a></li>
                         <li><a class="dropdown-item" href="#">Sistemas de Gestión</a></li>
                     </ul>
+                </li> -->
+
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" class="nav-link
+                  menu-text menu-nosotros collapse navbar-collapse navbar-right" [routerLink]="['desarrollo']">Aplicaciones</a>
                 </li>
 
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle menu-text menu-color" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Asesoria Académica
                     </a>
@@ -67,10 +73,11 @@
                         <li><a class="dropdown-item" href="#">Presentaciones</a></li>
                         <li><a class="dropdown-item" href="#">Normas APA</a></li>
                     </ul>
-                </li>
+                </li> -->
 
                 <li class="nav-item">
-                    <a class="nav-link menu-text menu-contactos">Cursos</a>
+                    <a data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" class="nav-link
+                  menu-text menu-nosotros collapse navbar-collapse navbar-right">Cursos</a>
                 </li>
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle menu-text" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -84,7 +91,8 @@
                     </ul>
                 </li> -->
                 <li class="nav-item">
-                    <a class="nav-link menu-text menu-contactos" routerLinkActive="Active" [routerLink]="['contactos']">Contactos</a>
+                    <a data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" class="nav-link
+                  menu-text menu-nosotros collapse navbar-collapse navbar-right" routerLinkActive="Active" [routerLink]="['contactos']">Contactos</a>
                 </li>
             </ul>
 
