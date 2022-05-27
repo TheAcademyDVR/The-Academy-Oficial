@@ -217,7 +217,7 @@
             <div class=" " role="toolbar " aria-label="Toolbar with button groups ">
 
                 <div class="btn-group me-4 " role="group " aria-label="First group ">
-                    <a href="https://wa.link/nccae5 " class="btn btn-outline-light rounded-pill btn-lg "><i class="bi bi-whatsapp "></i> Llamanos > </a>
+                    <a href="https://wa.link/nccae5" target="_blank" class="btn btn-outline-light rounded-pill btn-lg "><i class="bi bi-whatsapp "></i> Llamanos > </a>
                 </div>
 
                 <div class="btn-group me-4 " role="group " aria-label="First group ">
@@ -243,41 +243,41 @@
 
             <div class="col-sm-8 ">
                 <div class=" card-two ">
-                    <div class="card-body card-contactos">
-                        <div class="mb-3 contacto-detalle ">
+                    <div class="card-body ">
+                        <br><br>
+                        <div class="mb-3  ">
                             <h1 class="card-title ">Enviame un <span class="btn-span-static">&nbsp;&nbsp;Mensaje&nbsp;&nbsp;</span></h1>
                             <p class="card-text " style="font-size: 20px; ">Este es tu momento de iniciar tu preparación al 100% junto a The Academy.<br></p>
                         </div>
-
-
-                        <form [formGroup]="datos" class="row  needs-validation" novalidate>
+                        <form [formGroup]="datos">
                             <div class="mb-3 ">
-                                <input type="text" name="" class="form-control btn-radius" id="validationCustom01" placeholder="Nombre Completos..">
+                                <input type="text" name="" class="form-control btn-radius" id="validationCustom01" formControlName="nombre" placeholder="Nombre Completos..">
                             </div>
                             <div class="mb-3 ">
-                                <input type="text" class="form-control btn-radius" id="validationCustom01" placeholder="Escribe tu numero de WhatsApp...">
+                                <input type="number" class="form-control btn-radius" id="validationCustom01" formControlName="telefono" placeholder="Escribe tu numero de WhatsApp...">
                             </div>
                             <div class="mb-3 ">
-                                <input type="email " class="form-control btn-radius" id="exampleFormControlInput1 " formControlName="email" placeholder="Escribe tu correo electrónico">
+                                <input type="email" class="form-control btn-radius" id="exampleFormControlInput1 " formControlName="email" placeholder="Escribe tu correo electrónico">
                             </div>
-                            <div class="mb-3 ">
+                            <!-- <div class="mb-3 ">
                                 <input type="text" class="form-control btn-radius" id="validationCustom01" placeholder="Asunto" formControlName="asunto" required>
-                            </div>
+                            </div> -->
                             <div class="mb-3 ">
-                                <select class="form-select btn-radius" aria-label="Selecciona tu servicios que necesitas">
-
-                                <option value="1 ">Desarrollo de Sistemas</option>
-                                <option value="2 ">Desarrollo de Tesis</option>
-                                <option value="3 ">Asesoría Académicas</option>
-                                <option value="3 ">Capacitaciones</option>
-                                <option value="3 ">Más información</option>
+                                <label> &nbsp;&nbsp; Elija una opción</label>
+                                <select class="form-select btn-radius" formControlName="tipo" placeholder="Selecciona tu servicios que necesitas" aria-label="Selecciona tu servicios que necesitas">
+                                  <!-- <option selected>Selecciona el tipo de servicio</option> -->
+                                <option value="Desarrollo de Sistemas">Desarrollo de Sistemas</option>
+                                <option value="Desarrollo de Tesis">Desarrollo de Tesis</option>
+                                <option value="Asesoría Académicas">Asesoría Académicas</option>
+                                <option value="Capacitaciones">Capacitaciones</option>
+                                <option value="Más información">Más información</option>
                               </select>
                             </div>
                             <div class="mb-3 ">
-                                <textarea class="form-control  btn-radius-message" id="exampleFormControlTextarea1 " formControlName="mensaje" rows="5 " placeholder="Dejanos una descripción del servicio que necesitas..." required></textarea>
+                                <textarea class="form-control  btn-radius-message" id="exampleFormControlTextarea1 " required formControlName="mensaje" rows="5 " placeholder="Dejanos una descripción del servicio que necesitas..." required></textarea>
                             </div>
                             <div class="d-grid gap-2">
-                                <button class="btn btn-primary btn-radius" style="font-size: 18px" (click)="sendEmail()">Submit form</button>
+                                <button class="btn btn-primary btn-radius" type="submit" style="font-size: 18px" (click)="sendEmail()">Enviar mensaje</button>
                             </div>
 
                         </form>
@@ -288,7 +288,6 @@
         </div>
     </div>
 </div>
-
 
 
 <!--

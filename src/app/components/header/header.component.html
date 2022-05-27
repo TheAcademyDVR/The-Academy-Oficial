@@ -11,19 +11,19 @@
         <div class="collapse navbar-collapse navbar-right" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                    <a class="nav-link active menu-text menu-inicio" aria-current="page" href="{{'home'}}">Inicio</a>
+                    <a class="nav-link active menu-text menu-inicio" aria-current="page" routerLinkActive="Active" [routerLink]="['home']">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  menu-text menu-nosotros" href="#">Nosotros</a>
+                    <a data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" class="nav-link avbar-toggler  menu-text menu-nosotros collapse navbar-collapse navbar-right" [routerLink]="['nosotros']">Nosotros</a>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle menu-text" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle menu-text " href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Aplicaciones
                     </a>
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
 
-                        <li><a class="dropdown-item" href="#">App Móviles</a></li>
+                        <li><a class="dropdown-item " href="#">App Móviles</a></li>
                         <li><a class="dropdown-item" href="#">Páginas Web</a></li>
                         <li><a class="dropdown-item" href="#">Tienda Virtual</a></li>
                         <li><a class="dropdown-item" href="#">Delivery</a></li>
@@ -68,7 +68,11 @@
                         <li><a class="dropdown-item" href="#">Normas APA</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
+
+                <li class="nav-item">
+                    <a class="nav-link menu-text menu-contactos">Cursos</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle menu-text" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Cursos Gratis
                 </a>
@@ -78,14 +82,15 @@
                         <li><a class="dropdown-item" href="#">Contabilidad y Auditoría</a></li>
                         <li><a class="dropdown-item" href="#">Administración de Empresas</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li class="nav-item">
-                    <a class="nav-link menu-text menu-contactos">Contactos</a>
+                    <a class="nav-link menu-text menu-contactos" routerLinkActive="Active" [routerLink]="['contactos']">Contactos</a>
                 </li>
             </ul>
 
             <form class="d-flex">
-                <button class="btn btn-outline-primary menu-text-btn rounded-pill" type="submit" routerLinkActive="active" [routerLink]="['login']">INICIAR SESIÓN</button>
+                <button class="btn btn-outline-primary menu-text-btn rounded-pill" type="submit" routerLinkActive="active" [routerLink]="['home']">INICIAR SESIÓN</button>
+                <!-- <button class="btn btn-outline-primary menu-text-btn rounded-pill" type="submit" routerLinkActive="active" [routerLink]="['login']">INICIAR SESIÓN</button> -->
             </form>
         </div>
     </div>
